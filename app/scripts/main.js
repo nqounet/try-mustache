@@ -8,7 +8,7 @@ jQuery(function($, undefined){
     generateKeyFromPath = function(path){
         return 'fetched:' + path;
     },
-    getTemplateForce = function(path, $cb){
+    fetchTemplate = function(path, $cb){
         var key = generateKeyFromPath(path);
         $.get(path, function(template){
             console.debug('run $.get');
@@ -23,7 +23,7 @@ jQuery(function($, undefined){
             return $cb.fire(template);
         }
         else {
-            getTemplateForce(path, $cb);
+            fetchTemplate(path, $cb);
         }
     },
     render = function(targetId, targetName){
