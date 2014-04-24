@@ -1,2 +1,3 @@
-My name is {{name}}!
-How are you?
+<p>targetID は {{id}}.</p>
+<p>My 名前 is {{&name}}!</p>
+<p>How are you?</p>

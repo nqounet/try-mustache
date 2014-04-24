@@ -5,7 +5,8 @@
     "bootstrap": "~3.0.3",
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
-    "mustache": "~0.8.1"
+    "mustache": "~0.8.1",
+    "lscache": "~1.0.2"
   },
   "devDependencies": {}
 }
