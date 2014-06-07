@@ -50,8 +50,26 @@
             Mustache = window.Mustache;
             $runButtons = $('button[data-run=changeName]');
         },
+        showList = function() {
+            var list = {
+                list: [{
+                    text: 'hoge1'
+                }, {
+                    text: 'hoge2'
+                }, {
+                    text: 'hoge3'
+                }, {
+                    text: 'hoge4'
+                }]
+            };
+            $.get('templates/ul.mst', function(template) {
+                var rendered = Mustache.render(template, list);
+                $('#hige').html(rendered);
+            });
+        },
         initHandlers = function() {
             $runButtons.on('click', changeName);
+            $('#show-list').on('click', showList);
         },
         init = function() {
             setVars();

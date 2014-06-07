@@ -1,0 +1,6 @@
+{{#list}}
+<ul>
+    <li><p>{{text}}</p></li>
+</ul>
+{{/list}}
+{{^list}}値はありません{{/list}}
