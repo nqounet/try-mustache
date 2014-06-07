@@ -1,6 +1,12 @@
-'use strict';
+/*
+# try mustache
 
-jQuery(function($, undefined){
+@main main.js
+**/
+
+(function($, global, undefined){
+    'use strict';
+
     var DEBUG = 1,
     lscache,
     Mustache,
@@ -43,8 +49,8 @@ jQuery(function($, undefined){
         render($this.data('id'), $this.html());
     },
     setVars = function(){
-        lscache = window.lscache;
-        Mustache = window.Mustache;
+        lscache = global.lscache;
+        Mustache = global.Mustache;
         $runButtons = $('button[data-run=changeName]');
     },
     initHandlers = function(){
@@ -57,5 +63,5 @@ jQuery(function($, undefined){
             lscache.flush();
         }
     };
-    init();
-});
+    $(init);
+}(jQuery, this));

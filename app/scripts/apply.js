@@ -1,6 +1,13 @@
-'use strict';
+/*
+# Apply.js
+
+try apply syntax.
+
+@main apply.js
+**/
 
 jQuery(function($, undefined){
+    'use strict';
     var eventHoge = function(e){
         var args = Array.prototype.slice.apply(e.data);
         hoge.apply(this, args);
